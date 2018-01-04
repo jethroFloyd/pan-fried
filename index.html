@@ -9,64 +9,263 @@
 
     <title>Pan Fried Ventures</title>
 
-    <!-- Bootstrap -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
-	<link href="assets/css/bootstrap-theme.css" rel="stylesheet">
-	<link href="assets/css/font-awesome.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="assets/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+    <!-- owl carousel css -->
+    <link href="assets/js/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="assets/js/owl-carousel/owl.theme.css" rel="stylesheet">
+    <link href="assets/js/owl-carousel/owl.transitions.css" rel="stylesheet">
 
-    <!-- Custom Style -->
-    <link href="assets/css/style.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="assets/css/styles.css" rel="stylesheet">
+    <link href="assets/css/style-about.css" rel="stylesheet">
+    <!-- Font Used: Titillium Web -->
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
   </head>
 
   <body>
 
-	<div id="wrapper">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<h1><br><center>Pan Fried Ventures</center></h1>
-					<h2 class="subtitle">Thought partners for early-stage start-ups across domains.</h2>
-					<br>
-                    <br>
-                    <!-- Content for Thanks Page -->
-                    <!-- <a href="#">Go back</a> -->
+    <!-- background image overlay (semi transparent dark background image overlay) -->
+    <!-- comment or remove if you don't want the overlay on top of the image -->
+    <div class="background-image-overlay"></div>
 
-                    <!-- Form --> 
-					<form class="form signup inline" role="form" method="POST" action="https://formspree.io/rito@panfriedventures.com"><center>
-					  <div class="form-group">
-					    <input type="email" name="_replyto" class="form-control" id="EMail" placeholder="Your Email Address"><br>
-                        <textarea name="message" class="form-control" id="Message" placeholder="Your Message"></textarea>
-                        <input type="hidden" name="_subject" value="New Mail from Site!" />
-                        <input type="hidden" name="_next" value="https://panfriedventures.com/thanks.html" />
-					  </div><br>
-					  <button type="submit" class="btn btn-theme">Reach Out</button></center>
-					</form>		
+    <!-- outer background container - the element from where the default page background image is set, and the element which changes its background when scrolling through other sections (.section-wrapoer) that have attribute "data-custom-background-img" set.
+     - data-default-background-img attr is required for sections (.section-wrapper) below that have no custom background defined.
+     - use same image in the backstretch.js code in the footer for IE8 or less browsers -->
+    <div id="outer-background-container" data-default-background-img="assets/images/other_images/bg5.jpg" style="background-image:url(assets/images/other_images/bg5.jpg);"></div>
+    <!-- end: #outer-background-container -->
 
-                    <!-- Form --> 
-                    <!-- Social Icons -->
-                    <!--
-                    <div class="social">
-                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                         <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                         <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                         <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    </div> 
-                -->
-                    <!-- Social Icons -->
-				</div>
-				
-			</div>
-				
-		</div>
-	</div>
-    <div class="row">
-                <div class="col-md-12">
-                        <div class="footer"><br>&copy; Pan Fried Ventures LLP, 2017</div>
-                        
-                </div>
-            </div>  
+    <!-- Outer Container -->
+    <div id="outer-container">
+
+      <!-- Left Sidebar -->
+      <section id="left-sidebar">
+
+        <!-- ==================================================================
+        LOGO
+        ==================================================================  -->
+        <!-- change the img src to your logo -->
+        <div class="logo">
+          <a href="#intro" class="link-scroll"><img src="assets/images/other_images/logo.png" alt="Twilli Air"></a>
+        </div><!-- .logo -->
+        <!-- ==================== END: LOGO ==================== -->
+
+        <!-- Menu Icon for smaller viewports -->
+        <div id="mobile-menu-icon" class="visible-xs" onClick="toggle_main_menu();"><span class="glyphicon glyphicon-th"></span></div>
+
+        <!-- ==================================================================
+        MAIN MENU
+        ==================================================================  -->
+        <!-- Each menu item links to a section (<article class="section-wrapper...") in the main content below.
+             - set each <li> id to this format: "menu-item-[the id of the .section-wrapper to link to]".
+             - set href of each <a> to the id of the .section-wrapper to link to -->
+        <ul id="main-menu">
+          <li id="menu-item-featured" class="menu-item scroll"><a href="#about">About Us</a></li>
+          <!-- to include a link which doesn't scroll to a section inside the page, remove the .scroll class from the <li> - example below -->
+          <!-- <li id="menu-item-alt-page" class="menu-item"><a href="http://www.link.com">Outer Link</a></li> -->
+        </ul><!-- #main-menu -->
+        <!-- ==================== END: MAIN MENU ==================== -->
+
+      </section><!-- #left-sidebar -->
+      <!-- end: Left Sidebar -->
+
+      <!-- ==================================================================
+      MAIN CONTENT
+      ==================================================================  -->
+      <!-- all the website sections are contained in the <article> tag with class ".section-wrapper" and a unique id.
+           - to edit / remove / create website sections, you have to handle the content contained in these <article> tags -->
+      <section id="main-content" class="clearfix">
+
+        <!-- ==================== SECTION TYPE: Intro Text ==================== -->
+        <!-- This type of section should contain heading and intro paragraph. It can also include links to other sections -->
+        <!-- FOR EACH SECTION <article class="section-wrapper".. :
+             - remember to use a unique id,
+             - (optional) set a "data-custom-background-img" attribute with a link to custom background image which will be used when the viewer scrolls to this section -->
+        <article id="intro" class="section-wrapper clearfix" data-custom-background-img="assets/images/main-back.jpg">
+          <div class="content-wrapper clearfix">
+            <div class="col-sm-10 col-md-9 pull-right">
+
+              <!-- Start: Section content to edit -->
+
+                <!-- <p> text in .feature-text is larger  -->
+                <section class="feature-text">
+                  <h1>Pan Fried Ventures</h1>
+                  <p>Thought partners for early-stage start-ups across domains</p><br>
+                  <!-- to add scrolling effects to links linking to same page section, add .link-scroll class -->
+                  <p><a href="mailto: hello@panfried.co" class="link-scroll btn btn-outline-inverse btn-lg">hello@panfried.co</a></p>
+                </section>
+
+              <!-- End: Section content to edit -->
+
+            </div><!-- .col-sm-10 -->
+          </div><!-- .content-wrapper -->
+        </article><!-- .section-wrapper -->
+        <!-- ==================== END: SECTION TYPE: Intro Text ==================== -->
+        <!-- ==================== SECTION TYPE: Featured Items ==================== -->
+        <!-- This type of section should contain a max. of 3 items each consisting of an image and text. Each item may be linked -->
+        <!-- FOR EACH SECTION <article class="section-wrapper".. :
+             - remember to use a unique id,
+             - (optional) set a "data-custom-background-img" attribute with a link to custom background image which will be used when the viewer scrolls to this section -->
+        <article id="about" class="section-wrapper clearfix" data-custom-background-img="assets/images/team-back.png">
+          <div class="content-wrapper clearfix">
+            <div class="col-sm-11 pull-right">
+
+              <!-- Start: Section content to edit -->
+
+                <h1 class="section-title">Team</h1>
+
+                <!-- feature columns -->
+                <section class="feature-columns row clearfix">
+
+                  <!-- FEATURED ITEM 1 -->
+                  <article class="feature-col col-md-4">
+                    <!-- to make a popup/modal link add an onClick function call to the function:
+                        - populate_and_open_modal(event, '[id of popup content container - see below]') -->
+                    <!-- if you don't want to link the featured item, replace the below <a> with a <div class="thumbnail"> -->
+                    <figure class="snip1543">
+                    <img src="assets/images/som.jpg" alt="Sombodhi" />
+                    <figcaption>
+                      <h3>Sombodhi</h3><br>
+                      <p>Seasoned Entrepreneur.<br> Founded and Exited Aakar Innovations. Co-Founder, ChironX. Mentor for multiple start-ups.<br><br>Business and Operations.</p>
+                    </figcaption>
+                    <a href="https://www.linkedin.com/in/sombodhi/" target="_blank"  ></a>
+                  </figure>
+
+                  </article>
+                  <!-- END: FEATURED ITEM 1 -->
+
+                  <!-- FEATURED ITEM 2 -->
+                  <article class="feature-col col-md-4">
+                    <!-- to make a popup/modal link add an onClick function call to the function:
+                        - populate_and_open_modal(event, '[id of popup content container - see below]') -->
+                    <!-- if you don't want to link the featured item, replace the below <a> with a <div class="thumbnail"> -->
+                    <figure class="snip1543">
+                    <img src="assets/images/mainak.jpg" alt="Mainak" />
+                    <figcaption>
+                      <h3>Mainak</h3><br>
+                      <p>Experienced Investor.<br> COO at Calcutta Angels and previously at CIIE, IIM Ahmedabad. Working with and advising multiple startups. <br><br>Strategy and Product.</p>
+                    </figcaption>
+                    <a href="https://www.linkedin.com/in/mainakb/" target="_blank"></a>
+                  </figure>
+
+                  </article>
+                  <!-- END: FEATURED ITEM 2 -->
+
+                  <!-- FEATURED ITEM 3 -->
+                  <article class="feature-col col-md-4">
+                    <!-- to make a popup/modal link add an onClick function call to the function:
+                        - populate_and_open_modal(event, '[id of popup content container - see below]') -->
+                    <!-- if you don't want to link the featured item, replace the below <a> with a <div class="thumbnail"> -->
+                    <figure class="snip1543">
+                    <img src="assets/images/rito.jpg" alt="Rito" />
+                    <figcaption>
+                      <h3>Rito</h3><br>
+                      <p>Product and Tech Guy. <br>Head of Product at ChironX. Previously at Microsoft Research, Tor, Chromium and various start-ups. <br><br>Product and Tech.</p>
+                    </figcaption>
+                    <a href="https://www.linkedin.com/in/rito-m/" target="_blank"></a>
+                  </figure>
+
+                  </article>
+                  <!-- END: FEATURED ITEM 3 -->
+
+                </section><!-- end: .feature-columns -->
+
+              <!-- End: Section content to edit -->
+
+            </div><!-- .col-sm-10 -->
+          </div><!-- .content-wrapper -->
+        </article><!-- .section-wrapper -->
+        <!-- ==================== END: SECTION TYPE: Featured Items ==================== -->
+
+      </section><!-- #main-content -->
+      <!-- ==================== END: MAIN CONTENT ==================== -->
+
+      <!-- Footer -->
+      <section id="footer">
+
+        <!-- Go to Top -->
+        <div id="go-to-top" onclick="scroll_to_top();"><span class="icon glyphicon glyphicon-chevron-up"></span></div>
+
+        <!-- ==================================================================
+        SOCIAL ICONS
+        ==================================================================  -->
+        <!-- Each social icon item consists of the following:
+             - Link to the social page in href of <a>
+             - social icon in the <img> - a list of social icons options are found in the directory assets/images/theme_images/social_icons/ -->
+
+             <!--
+        <ul class="social-icons">
+          <li><a href="#" target="_blank" title="Facebook"><img src="assets/images/theme_images/social_icons/facebook.png" alt="Facebook"></a></li>
+          <li><a href="#" target="_blank" title="Twitter"><img src="assets/images/theme_images/social_icons/twitter.png" alt="Twitter"></a></li>
+          <li><a href="#" target="_blank" title="Google+"><img src="assets/images/theme_images/social_icons/googleplus.png" alt="Google+"></a></li>
+        </ul> -->
+        <!-- ==================== END: Social Icons ==================== -->
+
+        <!-- copyright text -->
+        <div class="footer-text-line">&copy; 2018 Pan Fried Ventures</div>
+      </section>
+      <!-- end: Footer -->
+
+    </div><!-- #outer-container -->
+    <!-- end: Outer Container -->
+
+    <!-- Modal -->
+    <!-- DO NOT MOVE, EDIT OR REMOVE - this is needed in order for popup content to be populated in it -->
+    <div class="modal fade" id="common-modal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <div class="modal-body">
+          </div><!-- .modal-body -->
+        </div><!-- .modal-content -->
+      </div><!-- .modal-dialog -->
+    </div><!-- .modal -->
+
+    <!-- Javascripts
+    ================================================== -->
+
+    <!-- Jquery and Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    
-</body>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Easing - for transitions and effects -->
+    <script src="assets/js/jquery.easing.1.3.js"></script>
+
+    <!-- background image strech script -->
+    <script src="assets/js/jquery.backstretch.min.js"></script>
+    <!-- background image fix for IE 9 or less
+       - use same background as set above to <body> -->
+    <!--[if lt IE 9]>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      jQuery("#outer-background-container").backstretch("assets/images/other_images/bg5.jpg");
+    });
+    </script>
+    <![endif]-->
+
+    <!-- detect mobile browsers -->
+    <script src="assets/js/detectmobilebrowser.js"></script>
+
+    <!-- owl carousel js -->
+    <script src="assets/js/owl-carousel/owl.carousel.min.js"></script>
+
+    <!-- Custom functions for this theme -->
+    <script src="assets/js/functions.js"></script>
+    <script src="assets/js/initialise-functions.js"></script>
+    <script src="assets/js/index-about.js"></script>
+
+    <!-- IE9 form fields placeholder fix -->
+    <!--[if lt IE 9]>
+    <script>contact_form_IE9_placeholder_fix();</script>
+    <![endif]-->
+
+  </body>
 </html>
